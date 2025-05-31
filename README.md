@@ -68,7 +68,6 @@ This project is **not licensed for reuse or distribution**.
 
 ## Screenshots / Demo
 
-
 ---
 
 ## 📁 Folder Structure
