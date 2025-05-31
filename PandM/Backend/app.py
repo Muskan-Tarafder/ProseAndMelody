@@ -6,8 +6,8 @@ from MainCode import BookMusicRecommender
 from MainCode import MongoCalls
 app = Flask(
     __name__,
-    template_folder=os.path.abspath("C:/Users/M A Tarafder/ProgramingLanguag/Projectsss/PandM/Frontend/templates"),
-    static_folder=os.path.abspath("C:/Users/M A Tarafder/ProgramingLanguag/Projectsss/PandM/Frontend/static")
+    template_folder="PandM/Frontend/templates",
+    static_folder="PandM/Frontend/static"
 )
 CORS(app)  # Allow requests from frontend
 
@@ -17,7 +17,7 @@ CORS(app)  # Allow requests from frontend
 # users_collection = db["users"]  # Collection name
 
 # app=Flask(__name__)
-app.config["MONGO_URI"]="mongodb://localhost:27017/ProseMelody"
+app.config["MONGO_URI"]="mongodb://localhost:27017/DatabaseName"
 db=PyMongo(app).db
 
 maincall=BookMusicRecommender()
@@ -79,14 +79,10 @@ def newUser():
 def bookEntry():
     data=request.json
     title=data.get('book')
-    # title="The Cruel Prince"
     instrument=data.get('instrument')
     language=data.get('language')
     maincall.title=title
     check=maincall.bookSearch(title)
-    # print("finally")
-    # print(maincall.final_book)
-    # print(maincall.final_music)
     if check!=True:
         jsonify({"message":check})
     result={}
@@ -101,7 +97,6 @@ def bookEntry():
     newdata={'user_id':maincall.current_user,'Recents':d}
     storecall.add_recent_playlist(newdata)
     return jsonify(result)
-    # print(maincall.s_stack)
 
 
 
@@ -129,7 +124,7 @@ def previous():
     if result==-1:
         return jsonify({"message":"it's the begining"})
     final={'platform':platform,'link':result}
-    print(final)
+    # print(final)
     return jsonify(final)
 
 @app.route("/fromRec",methods=['POST'])
@@ -141,7 +136,7 @@ def fromRec():
     if result==-1:
         return jsonify({"message":"internal error occured"})
     final={'playlistUrl':result,'platform':platform}
-    print("from rec:",final)
+    # print("from rec:",final)
     return jsonify(final)
 
 @app.route("/basicRec")
