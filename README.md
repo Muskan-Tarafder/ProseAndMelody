@@ -76,4 +76,26 @@ This project is **not licensed for reuse or distribution**.
 ---
 
 ## 📁 Folder Structure
- ```plaintext PandM/ ├── Backend/ │ ├── app.py # Flask application entry point │ ├── MainCode.py # Main logic: SVD, MongoDB, recommendations │ └── book_to_music.py # Content-based filtering logic │ ├── dataset/ │ └── book_genres.py # Reference document for book genres │ ├── .env # Environment variables (not shared) │ ├── Frontend/ │ ├── static/ │ │ ├── images/ # UI images │ │ ├── js/ # JavaScript files │ │ └── style/ # CSS files │ └── templates/ # HTML templates │ └── README.md # Project overview and instructions ``` 
+ ## 📁 Folder Structure
+
+```plaintext
+PandM/
+├── Backend/
+│   ├── app.py               # Flask application entry point
+│   ├── MainCode.py          # Main logic: SVD, MongoDB, recommendations
+│   └── book_to_music.py     # Content-based filtering logic
+│
+├── dataset/
+│   └── book_genres.py       # Reference document for book genres
+│
+├── .env                     # Environment variables (not shared)
+│
+├── Frontend/
+│   ├── static/
+│   │   ├── images/          # UI images
+│   │   ├── js/              # JavaScript files
+│   │   └── style/           # CSS files
+│   └── templates/           # HTML templates
+│
+└── README.md                # Project overview and instructions
+```
