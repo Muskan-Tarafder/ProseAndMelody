@@ -29,7 +29,7 @@ This system aims to enhance a reader's experience by pairing books with suitable
 
 ## 🔄 Recommendation Flow
 
-1. **User enters a book title.**
+1. User enters a book title.
 2. Book genre is fetched via OpenLibrary API.
 3. Genre is matched to music moods using a content-based mapping.
 4. The matched genres are passed into a collaborative filtering model (SVD).
