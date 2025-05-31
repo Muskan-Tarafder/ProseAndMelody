@@ -52,8 +52,8 @@ This project was collaboratively developed by a team of 4:
 
 -[@Muskan Tarafder](https://github.com/Muskan-Tarafder)
 -[@Rhyah M](https://github.com/rhy321)
-- Member 3 – Recommendation Algorithms
-- Member 4 – API handling & UI Polish
+-[@Tanvi Sanjay Patil]
+-[@Prajna Nayak]
 
 ---
 
