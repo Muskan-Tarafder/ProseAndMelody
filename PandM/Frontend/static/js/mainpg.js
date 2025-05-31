@@ -126,29 +126,6 @@ async function shufflePlaylist(bookName,filters,platform) {
   }
 }
 
-// async function playlistByGenreSelect(genre, platform) {
-//   try {
-//     dataToSend={'genre':genre,'platform':platform}
-//     console.log(dataToSend)
-//     const response = await fetch(`/fromRec`,{
-//       method: "GET",
-//       headers: {
-//         "Content-Type": "application/json"
-//       },
-//       body: JSON.stringify(dataToSend)
-//     });
-//     if (!response.ok) {
-//       throw new Error(`Failed to fetch playlist: ${response.status}`);
-//     }
-
-//     const data = await response.json();
-//     console.log(data)
-//     return data
-   
-//   } catch (error) {
-//     console.error("Error fetching playlist:", error);
-//   }
-// }
 
 async function playlistByGenreSelect(genre, platform) {
   try {
@@ -297,13 +274,7 @@ function genreCardClick(genre, platform) {
       console.error("API call failed:", error);
       alert("Could not fetch the playlist. Try again later.");
     });
-  // if (platform === 'youtube') {
-  //   playYoutubeLink = playlistUrl;
-  //   alert(`YouTube Playlist for ${genre} is ready! Click Play to listen.`);
-  // } else if (platform === 'spotify') {
-  //   playSpotifyLink = playlistUrl;
-  //   alert(`Spotify Playlist for ${genre} is ready! Click Play to listen.`);
-  // }
+  
 }
 
 
@@ -333,22 +304,7 @@ window.addEventListener('load', () => {
 });
 
 
-// REMOVE THIS BLOCK LATER!!!
-// example dictionaries!!
-// const booksData = {
-//   "The Great Adventure": [
-//     { platform: "youtube",link: "https://youtu.be/c_jomXhjUjI?si=zBM4hIH-mtORJg_c", title: "haha" },
-//     { platform: "spotify",link: "https://open.spotify.com/track/4PTG3Z6ehGkBFwjybzWkR8" ,title: "hehe" }
-//   ],
-//   "Mystery of the Lost City": [
-//     { platform: "spotify",link: "https://open.spotify.com/track/4PTG3Z6ehGkBFwjybzWkR8", title: "bark" },
-//     { platform: "youtube",link: "https://youtu.be/c_jomXhjUjI?si=zBM4hIH-mtORJg_c", title: "meow" },
-//     { platform: "youtube",link: "https://youtu.be/c_jomXhjUjI?si=zBM4hIH-mtORJg_c", title: "woof" }
-//   ]
-// };
-// renderFavorites(booksData);
 
-// REMOVE TILL HERE!!!
 async function logout(){
   alert('Logged out!')
   window.location.href = "/";
@@ -371,47 +327,7 @@ async function loadRecents() {
   }
 }
 
-// function renderRecents(recentsList){
-//   const recentsContainer=document.getElementById("recentsList");
-//   recentsContainer.innerHTML = ""; // Clear previous items
-//   if (recentsList =={}){
-//     recentsContainer.innerHTML="<p>Empty playlist</p>"
-//   }
-//   else{
-//     console.log(recentsList)
-//     recentsList.forEach(item =>{
-//       console.log(item)
-//     const recentDiv = document.createElement("div");
-//     recentDiv.className="recent_item";
 
-//     const titleSpan = document.createElement("span");
-//     titleSpan.textContent=item.title;
-
-//     const RecPlayBtn=document.createElement("button");
-//     RecPlayBtn.textContent="Play";
-//     RecPlayBtn.className="RecPlay";
-
-//     if (item.platform==="youtube"){
-//       RecPlayBtn.addEventListener("click", ()=>{
-//         playYoutubeLink = item.link;
-//         alert("Use the YouTube Playcard!");
-//       })
-//     }
-//     else if (item.platform==="spotify"){
-//       RecPlayBtn.addEventListener("click", ()=>{
-//         playSpotifyLink = item.link;
-//         alert("Use the Spotify Playcard!");
-//       }
-//     )
-//     }
-//     recentDiv.appendChild(titleSpan);
-//     recentDiv.appendChild(RecPlayBtn);
-//     recentsContainer.appendChild(recentDiv);
-  
-//   }
-//   )
-// }
-// }
 function renderRecents(recentsList) {
   const container = document.getElementById("recentsList");
   container.innerHTML = ""; // Clear previous items
@@ -587,7 +503,7 @@ async function showProfile(event) {
 }
 
 
-//previous butto
+//previous button
 
 
 async function goBack(event,platform) {
@@ -686,71 +602,3 @@ async function addToRecents(title, platform, link) {
     console.error("Error adding to recents:", error);
   }
 }
-
-
-
-
-
-
-// async function backendRequest(type, genre) {
-//   return new Promise((resolve) => {
-//     setTimeout(() => {
-//       resolve(`https://example.com/${type}-${genre}-playlist`);
-//     }, 1000);
-//   });
-// }
-
-// async function updatePlayLink(genre, platform) {
-//   const link = await backendRequest('genre', genre);
-//   if (platform === 'spotify') {
-//     document.getElementById('spotify-play-btn').href = link;
-//   } else if (platform === 'youtube') {
-//     document.getElementById('youtube-play-btn').href = link;
-//   }
-// }
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   document.querySelectorAll('.recommendation-card').forEach(card => {
-//     card.addEventListener('click', () => {
-//       const genre = card.dataset.genre;
-//       const platform = card.dataset.platform;
-//       updatePlayLink(genre, platform);
-//     });
-//   });
-
-//   document.getElementById('yt-next-btn').addEventListener('click', () => {
-//     updatePlayLink('nextGenre', 'youtube');
-//   });
-
-//   document.getElementById('yt-prev-btn').addEventListener('click', () => {
-//     updatePlayLink('prevGenre', 'youtube');
-//   });
-
-//   document.getElementById('sp-next-btn').addEventListener('click', () => {
-//     updatePlayLink('nextGenre', 'spotify');
-//   });
-
-//   document.getElementById('sp-prev-btn').addEventListener('click', () => {
-//     updatePlayLink('prevGenre', 'spotify');
-//   });
-
-//   document.querySelectorAll('.recent1 button, .favorite_songs button').forEach(button => {
-//     button.addEventListener('click', () => {
-//       const genre = button.previousElementSibling.textContent.trim().toLowerCase().replace(/ /g, '-');
-//       updatePlayLink(genre, 'youtube'); // Default to YouTube
-//     });
-//   });
-
-//   const searchInput = document.getElementById("searchInputText");
-//   console.log(searchInput)
-//   if (searchInput) {
-//     searchInput.addEventListener("keydown", function (e) {
-//       if (e.key === "Enter") {
-//         let query = e.target.value.trim();
-//         if (query !== "") {
-//           alert("Searching for: " + query); // Replace with real logic
-//         }
-//       }
-//     });
-//   }
-// });
