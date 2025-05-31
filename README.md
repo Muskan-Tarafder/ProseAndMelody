@@ -52,7 +52,7 @@ This project was collaboratively developed by a team of 4:
 
 -[@Muskan Tarafder](https://github.com/Muskan-Tarafder)
 -[@Rhyah M](https://github.com/rhy321)
--[@Tanvi Sanjay Patil]
+-[@Tanvi Sanjay Patil](https://github.com/TanviPatil1502)
 -[@Prajna Nayak](https://github.com/prajna-17)
 
 ---
