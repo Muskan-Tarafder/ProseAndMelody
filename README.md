@@ -51,7 +51,7 @@ This system aims to enhance a reader's experience by pairing books with suitable
 This project was collaboratively developed by a team of 4:
 
 -[@Muskan-Tarafder](https://github.com/Muskan-Tarafder)
-- Member 2 – Frontend and Integration
+-[@rhy321](https://github.com/rhy321)
 - Member 3 – Recommendation Algorithms
 - Member 4 – API handling & UI Polish
 
@@ -66,7 +66,12 @@ This project is **not licensed for reuse or distribution**.
 
 ---
 
-## Screenshots / Demo
+## Screenshots 
+
+![First Page](PandM/OutputScreenShots/FirstPage.jpg)
+![Main Page](PandM/OutputScreenShots/MainPage.jpg)
+![Sign Up Page](PandM/OutputScreenShots/SignUpPage.jpg)
+
 
 ---
 
