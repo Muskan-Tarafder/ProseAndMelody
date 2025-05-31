@@ -51,7 +51,7 @@ This system aims to enhance a reader's experience by pairing books with suitable
 This project was collaboratively developed by a team of 4:
 
 -[@Muskan-Tarafder](https://github.com/Muskan-Tarafder)
--[@rhy321](https://github.com/rhy321)
+-[@Rhyah-M](https://github.com/rhy321)
 - Member 3 – Recommendation Algorithms
 - Member 4 – API handling & UI Polish
 
