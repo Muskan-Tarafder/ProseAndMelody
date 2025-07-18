@@ -135,7 +135,6 @@ soupsieve==2.6
 srsly==2.5.1
 terminado==0.11.1
 testpath==0.5.0
-thinc==8.3.4
 threadpoolctl==3.6.0
 tomli==2.2.1
 tornado==6.4.2
