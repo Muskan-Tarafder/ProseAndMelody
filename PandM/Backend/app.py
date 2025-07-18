@@ -4,10 +4,14 @@ from flask_pymongo import PyMongo
 import os
 from PandM.Backend.MainCode import BookMusicRecommender
 from PandM.Backend.MainCode import MongoCalls
+
+base_dir=os.path.abspath(os.path.join(os.path.dirname(__file__),".."))
+template_dir=os.path.join(base_dir,'Frontend','templates')
+static_dir=os.path.join(base_dir,'Frontend','static')
 app = Flask(
     __name__,
-    template_folder="PandM/Frontend/templates",
-    static_folder="PandM/Frontend/static"
+    template_folder=template_dir,
+    static_folder=static_dir
 )
 CORS(app)  # Allow requests from frontend
 
