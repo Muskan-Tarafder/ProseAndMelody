@@ -2,8 +2,8 @@ from flask import Flask, request, jsonify,render_template,url_for
 from flask_cors import CORS
 from flask_pymongo import PyMongo
 import os
-from MainCode import BookMusicRecommender
-from MainCode import MongoCalls
+from PandM.Backend.MainCode import BookMusicRecommender
+from PandM.Backend.MainCode import MongoCalls
 app = Flask(
     __name__,
     template_folder="PandM/Frontend/templates",
