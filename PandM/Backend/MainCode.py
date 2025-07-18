@@ -13,8 +13,10 @@ from pymongo import MongoClient
 from bson import ObjectId
 import datetime
 from collections import defaultdict
-client = MongoClient("LocalHostLink")
-db = client["DatabaseName"] 
+mongo_uri=os.getenv("MONGO_URI")
+dbname=os.getenv("MONGO_DBNAME")
+client = MongoClient(mongo_uri)
+db = client[dbname] 
 
 class BookMusicRecommender:
     def __init__(self):
