@@ -17,8 +17,8 @@ CORS(app)  # Allow requests from frontend
 # users_collection = db["users"]  # Collection name
 
 # app=Flask(__name__)
-app.config["MONGO_URI"]="mongodb://localhost:27017/DatabaseName"
-db=PyMongo(app).db
+# app.config["MONGO_URI"]=os.getenv("MONGO_URI")
+# db=PyMongo(app).db
 
 maincall=BookMusicRecommender()
 storecall=MongoCalls()
